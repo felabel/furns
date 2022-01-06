@@ -1,15 +1,15 @@
 import React, {useEffect} from 'react'
 
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { connect } from 'react-redux';
-import { addToCart } from '../redux/shopping/shoppingActions';
+import { addToCart,  loadCurrentItem} from '../redux/shopping/shoppingActions';
 
-const Product = ({ productData, addToCart }) => {
+const Product = ({ productData, addToCart, loadCurrentItem }) => {
     useEffect(() => {
         AOS.init();
         AOS.refresh();
@@ -33,9 +33,12 @@ const Product = ({ productData, addToCart }) => {
                         
 
                         <div className="relative  w-3/4 h-4/5 mx-auto mt-5 ">
-                            <div className='w-full h-56 '>
-                                <img src={productData.image} alt={productData.title} className='h-full w-full bg-red-500'/>
-                            </div>
+                            <Link to={`/product/${productData.id}`}>
+                                <div className='w-full h-56 ' onClick={() => loadCurrentItem(productData)}>
+                                    <img src={productData.image} alt={productData.title} className='h-full w-full bg-red-500'/>
+                                </div>
+                            </Link>
+                            
                             
                             <button onClick={() => addToCart(productData.id)} className='add_to_cart_btn text-base absolute bottom-2  w-full h-auto bg-white left-0 py-2 shadow-md flex px-9 hover:text-yellow-500 flip-left' data-aos='flip-left' data-aos-delay='250' data-aos-duration='1000'>
                                 <span>
@@ -63,7 +66,8 @@ const Product = ({ productData, addToCart }) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addToCart: (id) => dispatch(addToCart(id))
+        addToCart: (id) => dispatch(addToCart(id)),
+        loadCurrentItem: (item) => dispatch(loadCurrentItem(item))
     }
 } 
 

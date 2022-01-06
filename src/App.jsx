@@ -1,14 +1,15 @@
 import React from "react";
-import {  BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {  BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 import "./App.css";
 import CartPage from "./components/CartPage";
 import HomePage from "./components/Hompage";
-import Products from "./components/Products";
-import ProductView from "./components/ProductView";
 import Shop from "./components/Shop";
+import SingleProduct from "./components/SingleProduct";
 
-function App() {
+import {connect} from 'react-redux';
+
+function App({ currentItem }) {
   return (
     <Router>
       <div className="App">
@@ -16,9 +17,13 @@ function App() {
           <Route exact path='/' component={HomePage}/>
 
           <Route path='/shop' component={Shop}/>
-          <Route path='/product' component={ProductView}/>
           <Route path='/cart' component={CartPage}/>
-          <Route path='/products' component={Products}/>
+          {!currentItem ? (
+            <Redirect to='/'/>
+          ) : (
+          <Route path='/product/:id' component={SingleProduct}/>
+
+          )}
         </Switch>
       
      
@@ -30,4 +35,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return{
+    currentItem: state.shop.currentItem
+  }
+}
+
+export default connect(mapStateToProps)(App);

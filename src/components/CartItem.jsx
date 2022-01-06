@@ -1,34 +1,49 @@
-import React from 'react'
+import {useState} from 'react'
 import styles from "./CartItem.module.css";
 
+import { connect } from 'react-redux';
+import { removeFromCart, adjustQty } from '../redux/shopping/shoppingActions'
 
-const CartItem = () => {
+
+const CartItem = ({ itemData, removeFromCart, adjustQty}) => {
+  const [input, setInput] = useState(itemData.qty)
+
+
+
+  const onChangeHandler = (e) => {
+    console.log(e.target.value)
+    setInput(e.target.value);
+    adjustQty(itemData.id, e.target.value)
+
+  }
     return (
         <div className={styles.cartItem}>
       <img
         className={styles.cartItem__image}
-        src= '/images/bed.jpeg'
-        alt='bed'
+        src= {itemData.image}
+        alt= {itemData.name}
       />
       <div className={styles.cartItem__details}>
-        <p className={styles.details__title}>Bedroom Exclusive Mattrass</p>
-        <p className={styles.details__desc}>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes</p>
-        <p className={styles.details__price}>$ 350</p>
+        <p className={styles.details__title}>{itemData.title}</p>
+        <p className={styles.details__desc}>{itemData.description}</p>
+        <p className={styles.details__price}>$ {itemData.price  }</p>
       </div>
       <div className={styles.cartItem__actions}>
         <div className={styles.cartItem__qty}>
-          <label htmlFor="qty">Qty</label>
+          <label htmlFor="qty">QTY</label>
           <input
             min="1"
             type="number"
             id="qty"
             name="qty"
+            value={input}
+            // value={itemData.qty}
+            onChange={onChangeHandler}
             
           />
         </div>
-        <button
-          
-          className={styles.actions__deleteItemBtn}
+        <button onClick={() => removeFromCart(itemData.id)}
+           className={styles.actions__deleteItemBtn}
         >
           <img
             src="https://image.flaticon.com/icons/svg/709/709519.svg"
@@ -38,6 +53,13 @@ const CartItem = () => {
       </div>
     </div>
     )
+};
+
+const mapDispatchToProps = dispatch => {
+  return{
+    adjustQty: (id, value) => dispatch(adjustQty(id, value)),
+    removeFromCart : (id) => dispatch(removeFromCart(id))
+  }
 }
 
-export default CartItem
+export default connect(null, mapDispatchToProps)(CartItem);

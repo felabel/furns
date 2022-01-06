@@ -59,9 +59,10 @@ const INITIAL_STATE= {
                     image: "../../../public/images/brown-cushion.jpg"
                 },
     ], //(id, yitle, desc., price)
-    cart: [], //(id, yitle, desc., price, img, quantity)
+    cart: [], //(id, title, desc., price, img, quantity)
     currentItem: null,
 }
+
 
 const ShopReducer = (state = INITIAL_STATE, action) => {
    switch (action.type) {
@@ -84,7 +85,10 @@ const ShopReducer = (state = INITIAL_STATE, action) => {
         case actionTypes.ADJUST_QTY:
         return {
             ...state,
-            cart: state.cart.map((item) => item.id === action.payload.id ? {...item, qty: action.payload.qty} : item
+            cart: state.cart.map((item) => 
+            item.id === action.payload.id 
+            ? {...item, qty: +action.payload.qty} 
+            : item
             )
         };
 
@@ -93,6 +97,8 @@ const ShopReducer = (state = INITIAL_STATE, action) => {
             ...state,
             currentItem: action.payload,
         };
+
+        
 
         default:
             return state
