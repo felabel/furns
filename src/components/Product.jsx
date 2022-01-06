@@ -35,7 +35,7 @@ const Product = ({ productData, addToCart, loadCurrentItem }) => {
                         <div className="relative  w-3/4 h-4/5 mx-auto mt-5 ">
                             <Link to={`/product/${productData.id}`}>
                                 <div className='w-full h-56 ' onClick={() => loadCurrentItem(productData)}>
-                                    <img src={productData.image} alt={productData.title} className='h-full w-full bg-red-500'/>
+                                    <img src={productData.image} alt={productData.title} className='h-full w-full '/>
                                 </div>
                             </Link>
                             

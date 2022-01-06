@@ -14,28 +14,28 @@ const INITIAL_STATE= {
                     title: "Brown cushion",
                     description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
                     price: "150",
-                    image: "../../../public/images/brown-cushion.jpg"
+                    image: "/images/brown-cushion.jpg"
                 },
                 {
                     id:3,
                     title: "Camp Chair",
                     description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
                     price: "100",
-                    image: "../../../public/images/camp-chair.jpg"
+                    image: "/images/camp-chair.jpg"
                 },
                 {
                     id:4,
                     title: "Brown cushion",
                     description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
                     price: "150",
-                    image: "../../../public/images/brown-cushion.jpg"
+                    image: "/images/brown-cushion.jpg"
                 },
                 {
                     id:5,
                     title: "Bedroom exclusive bed",
                     description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
                     price: "350",
-                    image: '../../../public/images/camp-chair.jpg'
+                    image: '/images/camp-chair.jpg'
                 },
                 {
                     id:6,
@@ -49,14 +49,13 @@ const INITIAL_STATE= {
                     title: "Camp Chair",
                     description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
                     price: "100",
-                    image: "../../../public/images/camp-chair.jpg"
+                    image: "/images/camp-chair.jpg"
                 },
                 {
                     id:8,
                     title: "Brown cushion",
                     description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
-                    price: "150",
-                    image: "../../../public/images/brown-cushion.jpg"
+                    price: "/images/brown-cushion.jpg"
                 },
     ], //(id, yitle, desc., price)
     cart: [], //(id, title, desc., price, img, quantity)
