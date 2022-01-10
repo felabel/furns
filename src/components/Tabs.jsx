@@ -28,19 +28,19 @@ function Tabs() {
   const { Content, tabsList, updateTabs } = useTabs(
     [
       {
-        label: <div className="text-base md:text-lg font-semibold"><p>New arrivals</p></div>,
+        label: <div className="text-sm md:text-lg font-semibold"><p>New arrivals</p></div>,
         content: () => <div><Featured /> </div>
       },
       {
-        label: <div className="text-base md:text-lg font-semibold"><p>Featured</p></div>,
+        label: <div className="text-sm md:text-lg font-semibold"><p>Featured</p></div>,
         content: () => <div> <NewArrival /> </div>
       },
       {
-        label: <div className="text-base md:text-lg font-semibold"><p>On Sale</p></div>,
+        label: <div className="text-sm md:text-lg font-semibold"><p>On Sale</p></div>,
         content: () => <div> <Featured /> </div>
       },
       {
-        label: <div className="text-base md:text-lg font-semibold"><p>Trending</p></div>,
+        label: <div className="text-sm md:text-lg font-semibold"><p>Trending</p></div>,
         content: () => <div> <NewArrival /> </div>
       }
 
@@ -52,7 +52,7 @@ function Tabs() {
     <div className="tabs -z-10">
       <div className="tabs-menu  w-full flex mx-auto h-auto text-center justify-between">
         {tabsList.map((t, index) => (
-            <div className=" text-sm font-semibold capitalize active:text-olive-orange hover:text-olive-orange px-3 mb-4 bg-gray-500 ">
+            <div className=" text-sm font-semibold capitalize active:text-olive-orange hover:text-olive-orange px-3 mb-4 ">
                 <span 
                 key={t.label}
                 className={

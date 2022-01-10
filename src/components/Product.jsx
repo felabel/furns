@@ -40,7 +40,7 @@ const Product = ({ productData, addToCart, loadCurrentItem }) => {
                             </Link>
                             
                             
-                            <button onClick={() => addToCart(productData.id)} className='add_to_cart_btn text-base absolute bottom-2  w-full h-auto bg-white left-0 py-2 shadow-md flex px-9 hover:text-olive-orange flip-left block' data-aos='flip-left' data-aos-delay='250' data-aos-duration='1000'>
+                            <button onClick={() => addToCart(productData.id)} className='hidden add_to_cart_btn text-base absolute bottom-2  w-full h-auto bg-white left-0 py-2 shadow-md flex px-9 hover:text-olive-orange flip-left block' data-aos='flip-left' data-aos-delay='250' data-aos-duration='1000'>
                                 <span>
                                 <Icon icon="ant-design:shopping-cart-outlined" inline={true} className='w-5 h-5 '/>
                                 </span>
