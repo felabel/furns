@@ -47,12 +47,12 @@ const SingleProduct = ({ currentItem, addToCart }) => {
                         </div>
                         <div className="button md:align-center md:block lg:flex w-4/5 shadow-md h-auto justify-around  ">
                             <div className='qty bg-brand w-32 text-center py-4 text-xl font-semibold text-white'>
-                                <span className='inline-block w-3/12 bg-yellow-500 pb-1 rounded-sm text-2xl shadow-sm'>-</span>
+                                <span className='inline-block w-3/12 bg-olive-orange pb-1 rounded-sm text-2xl shadow-sm'>-</span>
                                 <span className='inline-block w-1/2 bg-gray-100 text-black'>1</span>
-                                <span className='inline-block w-3/12 bg-yellow-500 pb-1 rounded-sm text-2xl shadow-sm'>+</span>
+                                <span className='inline-block w-3/12 bg-olive-orange pb-1 rounded-sm text-2xl shadow-sm'>+</span>
                             </div>
                             <div className='add_to cart py-3'>
-                                <button onClick={() => addToCart(currentItem.id)} className='btn rounded-sm bg-yellow-500 text-xl lg:px-10 md:px-4'>
+                                <button onClick={() => addToCart(currentItem.id)} className='btn rounded-sm bg-olive-orange text-xl lg:px-10 md:px-4'>
                                     Add To Cart
 
                                 </button>

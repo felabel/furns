@@ -1,7 +1,23 @@
 import { createStore } from "redux";
 import rootReducer from "./rootReducer";
-import { composeWithDevTools, composeWithDevtools } from 'redux-devtools-extension'
+import { composeWithDevTools } from 'redux-devtools-extension'
+// import throttle from 'lodash.throttle';
 
-const store = createStore(rootReducer, composeWithDevTools());
+// import { loadState } from "../localStorage";
+// import { saveState } from "../localStorage";
+// const persistedState = loadState()
+
+const store = createStore(
+    rootReducer, 
+    // persistedState, 
+    composeWithDevTools()
+    
+    );
+
+    // store.subscribe(throttle(() => {
+    //     saveState({
+    //       shop: store.getState().shop
+    //     });
+    //   }, 1000));
 
 export default store;

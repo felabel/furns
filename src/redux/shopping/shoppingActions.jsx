@@ -35,11 +35,6 @@ export const loadCurrentItem = (item) => {
     };
 };
 
-export const clearCart = (item) => {
-    return{
-        type: actionTypes.CLEAR,
-        payload: item,
-    };
-};
+
 
 

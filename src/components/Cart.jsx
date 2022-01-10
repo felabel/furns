@@ -3,9 +3,9 @@ import CartItem from './CartItem'
 import styles from "./Cart.module.css";
 import { connect } from 'react-redux'
 
-const Cart = ({ cart }) => {
+const Cart = ({clearCart, cart }) => {
     const [totalPrice, setTotalPrice] = useState(0);
-    const [totalItems, setTotalItema] = useState(0);
+    const [totalItems, setTotalItems] = useState(0);
 
     useEffect(() => {
         let items = 0;
@@ -18,11 +18,11 @@ const Cart = ({ cart }) => {
         })
 
         setTotalPrice(price);
-        setTotalItema(items)
+        setTotalItems(items)
         // return () => {
         //     cleanup
         // }
-    }, [cart, totalPrice, totalItems, setTotalItema, setTotalPrice])
+    }, [cart, totalPrice, totalItems, setTotalItems, setTotalPrice])
     return (
         <div>
             <div className={styles.cart__items}>
@@ -40,6 +40,9 @@ const Cart = ({ cart }) => {
                 <button className={styles.summary__checkoutBtn}>
                 Proceed To Checkout
                 </button>
+                <button  className={styles.summary__checkoutBtn}>
+                Clear Cart
+                </button>
             </div>
         </div>
     )
@@ -52,4 +55,6 @@ const mapStateToProps = (state) =>{
         cart: state.shop.cart
     }
 }
-export default connect(mapStateToProps)(Cart);
+
+
+export default connect( mapStateToProps)(Cart);

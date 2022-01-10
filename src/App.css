@@ -1,3 +1,6 @@
+.types:hover .type-image {
+ transform: rotate(360deg, 45deg);
+}
 
 .tooltip {
   position: relative;

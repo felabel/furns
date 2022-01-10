@@ -7,6 +7,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
     "@iconify/react": "^3.1.1",
     "aos": "^2.3.4",
     "aos-animations": "^0.0.7",
