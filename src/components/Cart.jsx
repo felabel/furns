@@ -39,7 +39,7 @@ const Cart = ({clearCart, cart }) => {
                     <p className="py-2 text-gray-700 text-xl">Total Items: {totalItems}</p>
                     <p className="py-2 text-gray-900 font-semibold text-lg">{`Total: $${totalPrice}`}</p>
                     <div className='checkout flex space-x-4 mt-4 text-base '>
-                    <button className='btn text-base  text-gray-100 text-olive-orange bg-green-600' >CHECKOUT</button>
+                    <button className='btn text-base  text-gray-100 text-olive-orange bg-gray-100 font-semibold' >CHECKOUT</button>
                     <button className='btn text-base bg-red-600 text-gray-100' onClick={() => (cart.length == 0) }>CLEAR</button>
                     </div>
                 </div>
