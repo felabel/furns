@@ -21,8 +21,8 @@ const Navbar = ({ cart }) => {
         
     }, [cart, cartCount])
     return (
-        <div className=' w-full z-50'>
-            <div className="bg-white nav-wrapper fixed shadow-md w-full z-50">
+        <div className=' w-full z-50 fixed top-0'>
+            <div className="bg-white nav-wrapper  shadow-md w-full z-50">
                 <div className="max-w-6xl mx-auto bg-white w-full flex justify-between py-4 lg:py-6 px-2 lg:px-0 z-50">
                     {/* button to display menu */}
                     <div className=" vmobile-menu  lg:hidden ">
@@ -80,8 +80,13 @@ const Navbar = ({ cart }) => {
                             <Icon icon="ant-design:shopping-cart-outlined" inline={true} className='w-6 h-6 my-auto cursor-pointer hover:text-olive-orange'/>
                             
                         </Link>
+                        { cartCount ===0 ? 
+                            <span></span>
+                        : 
                         <span className='w-5 h-5 text-sm rounded-full bg-olive-orange text-center pb-3 -mt-1 font-semibold text-white -ml-5 '>{cartCount}
                             </span>
+                        }
+                        
                     </div>
                     {/* mobile menu */}
                   
@@ -90,14 +95,14 @@ const Navbar = ({ cart }) => {
                    
 
                 </div>
-                <div className="nav-items bg-gray-200 w-full hidden">
+                <div className="nav-items bg-gray-200 w-full hidden md:block">
                     <div className="links text-center mx-auto py-4  text-gray-800">
-                        <Link to="/" className='px-6 capitalize hover:text-yellow-600 transition'>home</Link>
-                        <Link to="/" className='px-6 capitalize hover:text-yellow-600 transition'>About</Link>
-                        <Link to="/shop" className='px-6 capitalize hover:text-yellow-600 transition'>Home furniture</Link>
-                        <Link to="/products" className='px-6 capitalize hover:text-yellow-600 transition'>Office furniture</Link>
-                        <Link to="/product" className='px-6 capitalize hover:text-yellow-600 transition'>Hospital furniture</Link>
-                        <Link to="/" className='px-6 capitalize hover:text-yellow-600 transition'>Contact</Link>
+                        <Link to="/" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>home</Link>
+                        <Link to="/" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>About</Link>
+                        <Link to="/shop" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>Home furniture</Link>
+                        <Link to="/products" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>Office furniture</Link>
+                        <Link to="/product" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>Hospital furniture</Link>
+                        <Link to="/" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>Contact</Link>
                         
                     </div>
                 </div>
@@ -134,7 +139,7 @@ const Navbar = ({ cart }) => {
                                        <Link to='/' className='block uppercase py-2 hover:text-olive-orange'>
                                            Hospital Furniture
                                        </Link>
-                                       <Link to='/' className='block block uppercase py-2 hover:text-olive-orange'>
+                                       <Link to='/' className='block  uppercase py-2 hover:text-olive-orange'>
                                            Contact
                                        </Link>
                                    </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Sale = () => {
     return (
-        <div>
+        <div className='my-20'>
             <div className ='wrapper w-full h-auto my-10'>
                 <div className="grid lg:grid-cols-2 w-full h-66 md:h-80 gap-4  px-4">
                 <div className="left bg-[url('/images/slideone.jpg')] bg-no-repeat bg-cover p-4  md:p-14 relative h-44 md:h-auto">

@@ -23,6 +23,7 @@ const Cart = ({clearCart, cart }) => {
         //     cleanup
         // }
     }, [cart, totalPrice, totalItems, setTotalItems, setTotalPrice])
+    console.log('total is'+ cart.length)
     return (
         <div>
             <div className={styles.cart__items}>
@@ -31,18 +32,17 @@ const Cart = ({clearCart, cart }) => {
                 ))}
                 {/* <CartItem /> */}
             </div>
-            <div className={styles.cart__summary}>
-                <h4 className={styles.summary__title}>Cart Summary</h4>
-                <div className={styles.summary__price}>
-                <span>TOTAL:  {totalItems}</span>
-                <span>$ {totalPrice}</span>
+            
+            <div className='total-container text-left my-8 w-full '>
+                <div className='total p-6 w-full md:w-1/2 lg:w-1/3 mx-auto shadow-lg rounded-md'>
+                    <h1 className="text-2xl font-semibold text-gray-900">Order Summary</h1>
+                    <p className="py-2 text-gray-700 text-xl">Total Items: {totalItems}</p>
+                    <p className="py-2 text-gray-900 font-semibold text-lg">{`Total: $${totalPrice}`}</p>
+                    <div className='checkout flex space-x-4 mt-4 text-base '>
+                    <button className='btn text-base  text-gray-100 text-olive-orange bg-green-600' >CHECKOUT</button>
+                    <button className='btn text-base bg-red-600 text-gray-100' onClick={() => (cart.length == 0) }>CLEAR</button>
+                    </div>
                 </div>
-                <button className={styles.summary__checkoutBtn}>
-                Proceed To Checkout
-                </button>
-                <button  className={styles.summary__checkoutBtn}>
-                Clear Cart
-                </button>
             </div>
         </div>
     )

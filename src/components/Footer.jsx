@@ -1,10 +1,11 @@
 import React from 'react'
+
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
         <div>
-            <div className='w-full h-auto bg-white'>
+            <div className='mb-0 w-full h-auto bg-gray-700 '>
                 <div className="grid lg:grid-cols-4 flex gap-6 bg-gray-700 p-14 text-gray-100 max-w-7xl mx-auto">
                     <div className="about-us">
                         

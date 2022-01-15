@@ -11,11 +11,11 @@ const HeroSection = () => {
       }, []);
     
     return (
-        <div className='w-full '>
+        <div className='w-full md:pt-20'>
             <div className="wrapper w-auto h-120 md:h-120 ">
                 <div className=" slide  bg-gray-500 bg-[url('/images/slideone.jpg')] bg-no-repeat bg-cover w-full h-full sm:h-screen md:h-full lg:h-screen xl:h-screen pb-4">
                     <div className="overlay w-full h-auto absolute ">
-                        <div className="text fade-up w-full px-4 lg:w-1/2 h-auto  mx-auto text-center  text-white lg:py-36 pt-36 lg:pt-0 " >
+                        <div className="text fade-up w-full px-4 lg:w-1/2 h-auto  mx-auto text-center  text-white lg:pb-36 pt-36 lg:pt-28 " >
                             <p className='text-2xl font-semibold capitalize pb-1 lg:pb-4 fade-up' data-aos='fade-up' >New products</p>
                             <p className='text-3xl lg:text-6xl font-semibold pb-2 pt-2 capitalize'>flexible chair</p>
                             <p className='text-lg pb-4'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum quia quis error dolorem debitis neque adipisci minima in rerum unde.</p>

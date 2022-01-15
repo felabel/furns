@@ -8,6 +8,7 @@ import Shop from "./components/Shop";
 import SingleProduct from "./components/SingleProduct";
 import Tabs from "./components/Tabs";
 import {connect} from 'react-redux';
+import CartTest from "./components/CartTest";
 
 function App({ currentItem }) {
   return (
@@ -19,6 +20,7 @@ function App({ currentItem }) {
           <Route path='/shop' component={Shop}/>
           <Route path='/tabs' component={Tabs}/>
           <Route path='/cart' component={CartPage}/>
+          <Route path='/cartt' component={CartTest}/>
           {!currentItem ? (
             <Redirect to='/'/>
           ) : (

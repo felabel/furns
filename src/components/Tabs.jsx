@@ -50,7 +50,7 @@ function Tabs() {
 
   return (
     <div className="tabs -z-10">
-      <div className="tabs-menu  w-full flex mx-auto h-auto text-center justify-between">
+      <div className="tabs-menu  w-full sm:w-4/5 md:w-1/2  flex mx-auto h-auto text-center justify-between">
         {tabsList.map((t, index) => (
             <div className=" text-sm font-semibold capitalize active:text-olive-orange hover:text-olive-orange px-3 mb-4 ">
                 <span 
