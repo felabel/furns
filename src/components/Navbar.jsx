@@ -25,7 +25,7 @@ const Navbar = ({ cart }) => {
             <div className="bg-white nav-wrapper  shadow-md w-full z-50">
                 <div className="max-w-6xl mx-auto bg-white w-full flex justify-between py-4 lg:py-6 px-2 lg:px-0 z-50">
                     {/* button to display menu */}
-                    <div className=" vmobile-menu  lg:hidden ">
+                    <div className=" vmobile-menu  md:hidden ">
                             <button onClick = {() => setIsOpen(!isOpen)}>
                                 {!isOpen ? (
                                     <svg
@@ -99,9 +99,9 @@ const Navbar = ({ cart }) => {
                     <div className="links text-center mx-auto py-4  text-gray-800">
                         <Link to="/" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>home</Link>
                         <Link to="/" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>About</Link>
-                        <Link to="/shop" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>Home furniture</Link>
-                        <Link to="/products" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>Office furniture</Link>
-                        <Link to="/product" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>Hospital furniture</Link>
+                        <Link to="/shop" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>All furnitures</Link>
+                        <Link to="/office" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>Office furniture</Link>
+                        <Link to="/office" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>Hospital furniture</Link>
                         <Link to="/" className='px-6 md:px-4 lg:px-6 xl:px-6 capitalize hover:text-olive-orange transition'>Contact</Link>
                         
                     </div>
@@ -127,16 +127,16 @@ const Navbar = ({ cart }) => {
                                        <Link to='/' className='block uppercase py-2 hover:text-olive-orange'>
                                            Home
                                        </Link>
-                                       <Link to='/' className='block uppercase py-2 hover:text-olive-orange'>
+                                       <Link to='/about' className='block uppercase py-2 hover:text-olive-orange'>
                                            About
                                        </Link>
-                                       <Link to='/' className='block uppercase py-2 hover:text-olive-orange'>
-                                           Home Furniture
+                                       <Link to='/shop' className='block uppercase py-2 hover:text-olive-orange'>
+                                           All Furnitures
                                        </Link>
-                                       <Link to='/' className='block uppercase py-2 hover:text-olive-orange'>
+                                       <Link to='/office' className='block uppercase py-2 hover:text-olive-orange'>
                                            Office Furniture
                                        </Link>
-                                       <Link to='/' className='block uppercase py-2 hover:text-olive-orange'>
+                                       <Link to='/office' className='block uppercase py-2 hover:text-olive-orange'>
                                            Hospital Furniture
                                        </Link>
                                        <Link to='/' className='block  uppercase py-2 hover:text-olive-orange'>

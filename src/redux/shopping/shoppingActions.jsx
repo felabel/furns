@@ -34,6 +34,13 @@ export const loadCurrentItem = (item) => {
         payload: item,
     };
 };
+export const clearCart = (cart) => {
+    return {
+        type:actionTypes.CLEAR_CART,
+        payload: cart,
+
+    }
+}
 
 
 

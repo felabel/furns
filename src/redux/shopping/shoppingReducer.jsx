@@ -4,14 +4,16 @@ const INITIAL_STATE= {
     products: [
                 {
                     id:1,
-                    title: "Bedroom exclusive bed",
+                    title: " exclusive bed",
+                    category: "office",
                     description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
                     price: "350",
                     image: '/images/bed.jpeg'
                 },
                 {
                     id:2,
-                    title: "Brown cushion",
+                    title: "Coffee Brown cushion",
+                    category: "office",
                     description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
                     price: "150",
                     image: "/images/brown-cushion.jpg"
@@ -32,7 +34,8 @@ const INITIAL_STATE= {
                 },
                 {
                     id:5,
-                    title: "Bedroom exclusive bed",
+                    category: "office",
+                    title: "office chair ",
                     description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
                     price: "350",
                     image: '/images/camp-chair.jpg'
@@ -54,6 +57,7 @@ const INITIAL_STATE= {
                 },
                 {
                     id:8,
+                    category: "office",
                     title: "Precious chair",
                     description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
                     price: "100",
@@ -87,7 +91,151 @@ const INITIAL_STATE= {
                     price: "150",
                     image: "/images/brown-cushion.jpg"
                 },
-                
+                {
+                    id:13,
+                    title: "Brown cushion",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "150",
+                    image: "/images/brown-cushion.jpg"
+                },
+                {
+                    id:14,
+                    title: "Bedroom exclusive bed",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "350",
+                    image: '/images/camp-chair.jpg'
+                },
+                {
+                    id:15,
+                    title: "Bedroom exclusive bed",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "350",
+                    image: '/images/bed.jpeg'
+                },
+                {
+                    id:16,
+                    title: "Precious chair",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "100",
+                    image: "/images/camp-chair.jpg"
+                },
+                {
+                    id:17,
+                    title: "Bedroom exclusive bed",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "350",
+                    image: '/images/bed.jpeg'
+                },
+                {
+                    id:18,
+                    title: "akkada",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "150",
+                    image: "/images/brown-cushion.jpg"
+                },
+                {
+                    id:19,
+                    title: "dining chair",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "350",
+                    image: '/images/camp-chair.jpg'
+                },
+                {
+                    id:20,
+                    title: "plastic chair",
+                    description: "  versions have evolved over the years, sometimes",
+                    price: "350",
+                    image: '/images/bed.jpeg'
+                },
+                {
+                    id:21,
+                    title: " exclusive bed",
+                    category: "office",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "350",
+                    image: '/images/bed.jpeg'
+                },
+                {
+                    id:22,
+                    title: "Coffee Brown cushion",
+                    category: "office",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "150",
+                    image: "/images/brown-cushion.jpg"
+                },
+                {
+                    id:23,
+                    title: "Camp Chair",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "100",
+                    image: "/images/camp-chair.jpg"
+                },
+                {
+                    id:24,
+                    title: "Brown cushion",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "150",
+                    image: "/images/brown-cushion.jpg"
+                },
+                {
+                    id:25,
+                    category: "office",
+                    title: "office chair ",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "350",
+                    image: '/images/camp-chair.jpg'
+                },
+                {
+                    id:26,
+                    title: "Bedroom exclusive bed",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "350",
+                    image: '/images/bed.jpeg'
+                },
+               
+                {
+                    id:27,
+                    title: "Bedroom exclusive bed",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "350",
+                    image: '/images/bed.jpeg'
+                },
+                {
+                    id:28,
+                    category: "office",
+                    title: "Precious chair",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "100",
+                    image: "/images/camp-chair.jpg"
+                },
+                {
+                    id:29,
+                    title: "Bedroom exclusive bed",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "350",
+                    image: '/images/bed.jpeg'
+                },
+                {
+                    id:30,
+                    title: "Brown cushion",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "150",
+                    image: "/images/brown-cushion.jpg"
+                },
+                {
+                    id:31,
+                    title: "Camp Chair",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "100",
+                    image: "/images/camp-chair.jpg"
+                },
+                {
+                    id:32,
+                    title: "Brown cushion",
+                    description: "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes",
+                    price: "150",
+                    image: "/images/brown-cushion.jpg"
+                },
                
 
     ], //(id, yitle, desc., price)
@@ -128,6 +276,11 @@ const ShopReducer = (state = INITIAL_STATE, action) => {
         return {
             ...state,
             currentItem: action.payload,
+        };
+        case actionTypes.CLEAR_CART:
+        return {
+            ...state,
+            cart: []
         };
 
 

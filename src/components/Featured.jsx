@@ -6,7 +6,7 @@ const Featured = ({ products }) => {
     return (
         <div className=" ">
             
-            <div className="lg:max-w-6xl w-full sm:w-4/5 lg:w-full lg:bg-blue-300 grid grid-cols-2 sm:grid-cols-2  sm:bg-pink-300 md:bg-yellow-400 sm:gap-x-6 lg:grid-cols-4  h-auto mx-auto gap-y-6 gap-x-2    md:pl-12 lg:pl-1 py-4 bg-red-500">
+            <div className="lg:max-w-6xl w-full sm:w-4/5 lg:w-full  grid grid-cols-2 sm:grid-cols-2  sm:gap-x-6 lg:grid-cols-4  h-auto mx-auto gap-y-6 gap-x-2    md:pl-12 lg:pl-1 py-4 ">
                 {products.filter((prod, i) => i < 4).map(prod => (
                         <Product Key={prod.id} productData={prod} />
                     ))}

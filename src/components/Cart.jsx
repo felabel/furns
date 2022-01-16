@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import CartItem from './CartItem'
 import styles from "./Cart.module.css";
 import { connect } from 'react-redux'
+import { clearCart } from '../redux/shopping/shoppingActions';
 
 const Cart = ({clearCart, cart }) => {
     const [totalPrice, setTotalPrice] = useState(0);
@@ -40,7 +41,7 @@ const Cart = ({clearCart, cart }) => {
                     <p className="py-2 text-gray-900 font-semibold text-lg">{`Total: $${totalPrice}`}</p>
                     <div className='checkout flex space-x-4 mt-4 text-base '>
                     <button className='btn text-base  text-gray-100 text-olive-orange bg-gray-100 font-semibold' >CHECKOUT</button>
-                    <button className='btn text-base bg-red-600 text-gray-100' onClick={() => (cart.length == 0) }>CLEAR</button>
+                    <button className='btn text-base bg-red-600 text-gray-100' onClick={() => clearCart() }>CLEAR</button>
                     </div>
                 </div>
             </div>
@@ -55,6 +56,11 @@ const mapStateToProps = (state) =>{
         cart: state.shop.cart
     }
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
+        clearCart: (cart) => dispatch(clearCart(cart))
+    }
+} 
 
 
-export default connect( mapStateToProps)(Cart);
+export default connect( mapStateToProps, mapDispatchToProps)(Cart);
