@@ -2,7 +2,6 @@ import { connect } from  'react-redux'
 import {useState, useMemo} from 'react';
 import Product from "./Product";
 import Pagination from "../Pagination"
-import { withRouter, Link } from 'react-router-dom';
 
 let PageSize = 8 ;
 
@@ -16,7 +15,7 @@ const Products = ({ products, productData  }) => {
         return products.slice(firstPageIndex, lastPageIndex)
     }, [currentPage, products])
     console.log(currentPage)
-    console.log( 'lrngth is' + products.length)
+    console.log( 'length is' + products.length)
     const mappedProducts = items.map((products, id) => {
        return (
         <div key={products.id}  className="  ">
