@@ -1,7 +1,7 @@
 import { connect } from  'react-redux'
 import {useState, useMemo} from 'react';
 import Product from "./Product";
-import Pagination from "./../Pagination"
+import Pagination from "./Pagination"
 
 let PageSize = 8 ;
 
