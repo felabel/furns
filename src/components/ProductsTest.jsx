@@ -35,7 +35,7 @@ const Products = ({ products, productData  }) => {
     return (
        
         <section className=" lg:mx-auto w-full">
-            <div className="lg:max-w-6xl mx-auto lg:mt-24 pb-10  grid grid-cols-2 lg:grid-cols-4 w-full h-auto  gap-y-6 gap-2  md:bg-yellow-500 md:w-4/5 px-1">
+            <div className="lg:max-w-6xl mx-auto lg:mt-24 pb-10  grid grid-cols-2 lg:grid-cols-4 w-full h-auto  gap-y-6 gap-2   md:w-4/5 px-1">
 
 
             { mappedProducts}
