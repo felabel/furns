@@ -22,7 +22,7 @@ const Navbar = ({ cart }) => {
     }, [cart, cartCount])
     return (
         <div className=' w-full z-50 fixed top-0'>
-            <div className="bg-white nav-wrapper  shadow-md w-full z-50">
+            <div className="overflow-x-hidden bg-white nav-wrapper  shadow-md w-full z-50 ">
                 <div className="max-w-6xl mx-auto bg-white w-full flex justify-between py-4 lg:py-6 px-2 lg:px-0 z-50">
                     {/* button to display menu */}
                     <div className=" vmobile-menu  md:hidden ">
