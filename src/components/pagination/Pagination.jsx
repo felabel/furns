@@ -88,7 +88,7 @@ const Pagination = props => {
 
     let lastPage = paginationRange[paginationRange.length - 1];
     return (
-        <div className="bg-red-400 w-96 h-auto hidden">
+        <div className=" w-96 h-auto ">
           <ul className={className}>
             {currentPage === 1 ? "" :
                 (<li
@@ -104,7 +104,7 @@ const Pagination = props => {
 
             {paginationRange.map((pageNumber, i) => {
                 if (pageNumber === DOTS) {
-                    return <li key={i} className="relative inline-flex items-center px-4 py-2 border border-gray-300 bg-red-500 text-sm font-medium text-gray-700 ">&#8230;</li>;
+                    return <li key={i} className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium text-gray-700 ">&#8230;</li>;
                 }
 
                 return (
@@ -118,16 +118,17 @@ const Pagination = props => {
                 );
             })}
             {
-                currentPage === pageSize ? "" : (
-                    <li
-                        className={`${currentPage === lastPage ? "cursor-pointer relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-5" : "bg-white border-gray-300 text-gray-500 hover:bg-gray-50  inline-flex relative items-center px-4 py-2 border text-sm font-medium"}`}
-                        onClick={onNext}
-                    >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 my-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                    </li>
-                )
+                currentPage === pageSize ? "" : "" 
+                // (
+                //     <li
+                //         className={`${currentPage === lastPage ? "cursor-pointer relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-5" : "bg-white border-gray-300 text-gray-500 hover:bg-gray-50  inline-flex relative items-center px-4 py-2 border text-sm font-medium"}`}
+                //         onClick={onNext}
+                //     >
+                //         <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 my-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                //             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                //         </svg>
+                //     </li>
+                // )
             }
         </ul>  
         </div>
