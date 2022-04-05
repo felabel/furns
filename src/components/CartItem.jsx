@@ -88,7 +88,7 @@ const CartItem = ({  itemData, removeFromCart, adjustQty}) => {
                 
                     <div className="grid grid-cols-3 pl-2 ">
                         <div className="col-span-1">
-                           src={itemData.image} alt ={itemData.title}/>
+                           <img src={itemData.image} alt ={itemData.title} />
                         </div>
                         <div className="col-span-2 px-1">
                             <p className='text-lg font-semibold py-1'>{itemData.title}</p>
