@@ -88,10 +88,10 @@ const CartItem = ({  itemData, removeFromCart, adjustQty}) => {
                 
                     <div className="grid grid-cols-3 pl-2 ">
                         <div className="col-span-1">
-                            <img src='/images/bed.jpeg' />
+                           src={itemData.image} alt ={itemData.title}/>
                         </div>
                         <div className="col-span-2 px-1">
-                            <p className='text-lg font-semibold py-1'>exclusive bed</p>
+                            <p className='text-lg font-semibold py-1'>{itemData.title}</p>
                             <p className='text-base text-gray-600 py-1'>size: 64inches</p>
                             <p className='text-sm text-black font-semibold py-1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
                             <p>$ {itemData.price* itemData.qty}</p>
